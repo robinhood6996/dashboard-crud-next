@@ -23,40 +23,26 @@ const items = [
     title: 'Dashboard'
   },
   {
-    href: '/customers',
+    href: '/create-hue',
     icon: (<UsersIcon fontSize="small" />),
-    title: 'Customers'
+    title: 'Create'
   },
   {
-    href: '/products',
+    href: '/alldata',
     icon: (<ShoppingBagIcon fontSize="small" />),
-    title: 'Products'
+    title: 'All Data'
   },
-  {
-    href: '/account',
-    icon: (<UserIcon fontSize="small" />),
-    title: 'Account'
-  },
-  {
-    href: '/settings',
-    icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
-  },
-  {
-    href: '/login',
-    icon: (<LockIcon fontSize="small" />),
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: (<UserAddIcon fontSize="small" />),
-    title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: (<XCircleIcon fontSize="small" />),
-    title: 'Error'
-  }
+
+  // {
+  //   href: '/login',
+  //   icon: (<LockIcon fontSize="small" />),
+  //   title: 'Login'
+  // },
+  // {
+  //   href: '/register',
+  //   icon: (<UserAddIcon fontSize="small" />),
+  //   title: 'Register'
+  // }
 ];
 
 export const DashboardSidebar = (props) => {
@@ -90,7 +76,7 @@ export const DashboardSidebar = (props) => {
           height: '100%'
         }}
       >
-        <div>
+        {/* <div>
           <Box sx={{ p: 3 }}>
             <NextLink
               href="/"
@@ -144,7 +130,7 @@ export const DashboardSidebar = (props) => {
               />
             </Box>
           </Box>
-        </div>
+        </div> */}
         <Divider
           sx={{
             borderColor: '#2D3748',
@@ -162,56 +148,6 @@ export const DashboardSidebar = (props) => {
           ))}
         </Box>
         <Divider sx={{ borderColor: '#2D3748' }} />
-        <Box
-          sx={{
-            px: 2,
-            py: 3
-          }}
-        >
-          <Typography
-            color="neutral.100"
-            variant="subtitle2"
-          >
-            Need more features?
-          </Typography>
-          <Typography
-            color="neutral.500"
-            variant="body2"
-          >
-            Check out our Pro solution template.
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              mt: 2,
-              mx: 'auto',
-              width: '160px',
-              '& img': {
-                width: '100%'
-              }
-            }}
-          >
-            <img
-              alt="Go to pro"
-              src="/static/images/sidebar_pro.png"
-            />
-          </Box>
-          <NextLink
-            href="https://material-kit-pro-react.devias.io/"
-            passHref
-          >
-            <Button
-              color="secondary"
-              component="a"
-              endIcon={(<OpenInNewIcon />)}
-              fullWidth
-              sx={{ mt: 2 }}
-              variant="contained"
-            >
-              Pro Live Preview
-            </Button>
-          </NextLink>
-        </Box>
       </Box>
     </>
   );
